@@ -10,18 +10,20 @@ module.exports = {
       colors: {
         black: {
           DEFAULT: "#000",
-          100: "#010C15",
-          200: "#011627"
-        }
+          100: "#010C15", //background color
+          200: "#011627", //template color
+          300: "#071511", //github outer color
+        },
+        gray: {
+          custom: '#607B96',
+          custom2: '#42D9AC',//github inner color
+        },
       },
       fontFamily: {
         'fira-code': ['"Fire Code"', 'monospace'],
       },
       borderColor: {
         'white': '#1e2d3d',
-      },
-      fontColor: {
-        'gray': '#607B96',
       },
     },
   },
