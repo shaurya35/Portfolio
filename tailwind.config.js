@@ -7,10 +7,21 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        black: {
+          DEFAULT: "#000",
+          100: "#010C15",
+          200: "#011627"
+        }
+      },
+      fontFamily: {
+        'fira-code': ['"Fire Code"', 'monospace'],
+      },
+      borderColor: {
+        'white': '#1e2d3d',
+      },
+      fontColor: {
+        'gray': '#607B96',
       },
     },
   },
