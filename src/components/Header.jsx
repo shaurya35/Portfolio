@@ -26,7 +26,7 @@ const Header = () => {
           <button
             className={`w-full h-full px-6 ${
               activeButton === "hello"
-                ? "border-b-2 border-yellow-exclusive"
+                ? "border-b-2 border-yellow-exclusive text-white"
                 : ""
             }`}
             onClick={() => handleButtonClick("/", "hello")}
@@ -39,7 +39,7 @@ const Header = () => {
           <button
             className={`w-full h-full px-6 ${
               activeButton === "about-me"
-                ? "border-b-2 border-yellow-exclusive"
+                ? "border-b-2 border-yellow-exclusive text-white"
                 : ""
             }`}
             onClick={() => handleButtonClick("/about-me", "about-me")}
@@ -52,7 +52,7 @@ const Header = () => {
           <button
             className={`w-full h-full px-6 ${
               activeButton === "projects"
-                ? "border-b-2 border-yellow-exclusive"
+                ? "border-b-2 border-yellow-exclusive text-white"
                 : ""
             }`}
             onClick={() => handleButtonClick("/projects", "projects")}
@@ -66,7 +66,7 @@ const Header = () => {
         <button
           className={`w-full h-full px-6 ${
             activeButton === "contact-me"
-              ? "border-b-2 border-yellow-exclusive"
+              ? "border-b-2 border-yellow-exclusive text-white"
               : ""
           }`}
           onClick={() => handleButtonClick("/contact-me", "contact-me")}
