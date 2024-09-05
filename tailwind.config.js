@@ -8,22 +8,26 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        yellow: {
+          exclusive: "#fea55f", // Custom yellow color
+        },
         black: {
           DEFAULT: "#000",
-          100: "#010C15", //background color
-          200: "#011627", //template color
-          300: "#071511", //github outer color
+          100: "#010C15", // background color
+          200: "#011627", // template color
+          300: "#071511", // github outer color
+          400: "#0D2031", // button hover color
         },
         gray: {
-          custom: '#607B96',
-          custom2: '#42D9AC',//github inner color
+          custom: "#607B96",
+          custom2: "#42D9AC", // github inner color
         },
       },
       fontFamily: {
-        'fira-code': ['"Fire Code"', 'monospace'],
+        "fira-code": ['"Fira Code"', "monospace"],
       },
       borderColor: {
-        'white': '#1e2d3d',
+        white: "#1e2d3d",
       },
     },
   },

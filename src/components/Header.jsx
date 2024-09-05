@@ -1,63 +1,78 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
 const Header = () => {
+  const [activeButton, setActiveButton] = useState(""); 
   const router = useRouter();
 
-  const handleHomeClick = () => {
-    router.push("/");
-  };
-
-  const handleHelloClick = () => {
-    router.push("/");
-  };
-
-  const handleAboutMeClick = () => {
-    router.push("/about-me");
-  };
-
-  const handleProjectsClick = () => {
-    router.push("/projects");
-  };
-
-  const handleContactMeClick = () => {
-    router.push("/contact-me");
+  const handleButtonClick = (path, buttonName) => {
+    setActiveButton(buttonName); 
+    router.push(path); 
   };
 
   return (
     <header className="h-[64px] lg:h-[50px] border-white border-b font-fira-code text-[19px] lg:text-[16px] text-gray-custom flex justify-between">
       <div className="flex items-center h-full">
+
         <div
-          className="pr-48 pl-6 lg:border-white lg:border-r h-full flex items-center cursor-pointer"
-          onClick={handleHomeClick}
+          className="pr-48 pl-6 lg:border-white lg:border-r h-full flex items-center cursor-pointer hover:bg-black-400"
+          onClick={() => handleButtonClick("/", "home")}
         >
-          <button>shaurya-jha</button>
+          <button className={`w-full h-full`}>shaurya-jha</button>
         </div>
-        <div
-          className="hidden lg:flex pl-6 pr-6 lg:border-white lg:border-r h-full items-center cursor-pointer"
-          onClick={handleHelloClick}
-        >
-          <button>_hello</button>
+
+        <div className="hidden lg:flex lg:border-white lg:border-r h-full items-center cursor-pointer hover:bg-black-400">
+          <button
+            className={`w-full h-full px-6 ${
+              activeButton === "hello"
+                ? "border-b-2 border-yellow-exclusive"
+                : ""
+            }`}
+            onClick={() => handleButtonClick("/", "hello")}
+          >
+            _hello
+          </button>
         </div>
-        <div
-          className="hidden lg:flex pl-6 pr-6 lg:border-white lg:border-r h-full items-center cursor-pointer"
-          onClick={handleAboutMeClick}
-        >
-          <button>_about-me</button>
+
+        <div className="hidden lg:flex lg:border-white lg:border-r h-full items-center cursor-pointer hover:bg-black-400">
+          <button
+            className={`w-full h-full px-6 ${
+              activeButton === "about-me"
+                ? "border-b-2 border-yellow-exclusive"
+                : ""
+            }`}
+            onClick={() => handleButtonClick("/about-me", "about-me")}
+          >
+            _about-me
+          </button>
         </div>
-        <div
-          className="hidden lg:flex pl-6 pr-6 lg:border-white lg:border-r h-full items-center cursor-pointer"
-          onClick={handleProjectsClick}
-        >
-          <button>_projects</button>
+
+        <div className="hidden lg:flex lg:border-white lg:border-r h-full items-center cursor-pointer hover:bg-black-400">
+          <button
+            className={`w-full h-full px-6 ${
+              activeButton === "projects"
+                ? "border-b-2 border-yellow-exclusive"
+                : ""
+            }`}
+            onClick={() => handleButtonClick("/projects", "projects")}
+          >
+            _projects
+          </button>
         </div>
       </div>
-      <div
-        className="hidden lg:flex pl-6 pr-6 lg:border-white lg:border-l h-full items-center cursor-pointer"
-        onClick={handleContactMeClick}
-      >
-        <button>_contact-me</button>
+
+      <div className="hidden lg:flex lg:border-white lg:border-l h-full items-center cursor-pointer hover:bg-black-400">
+        <button
+          className={`w-full h-full px-6 ${
+            activeButton === "contact-me"
+              ? "border-b-2 border-yellow-exclusive"
+              : ""
+          }`}
+          onClick={() => handleButtonClick("/contact-me", "contact-me")}
+        >
+          _contact-me
+        </button>
       </div>
     </header>
   );
