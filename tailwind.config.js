@@ -22,6 +22,21 @@ module.exports = {
           custom: "#607B96",
           custom2: "#42D9AC", // github inner color
         },
+        white: {
+          custom: "#e5e9f0", // name color
+        },
+        blue:{
+          custom: "#4d5bce", // typewriter color
+        },
+        green: {
+          custom: "#43d9ad", //github link text
+        },
+        red: {
+          custom: "#e99287", //github link
+        },
+        white: {
+          custom: "#ffffff", //active link
+        }
       },
       fontFamily: {
         "fira-code": ['"Fira Code"', "monospace"],

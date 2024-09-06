@@ -18,14 +18,17 @@ const Header = () => {
           className="pr-48 pl-6 lg:border-white lg:border-r h-full flex items-center cursor-pointer hover:bg-black-400"
           onClick={() => handleButtonClick("/", "_home")}
         >
-          <button className={`w-full h-full`}>shaurya-jha</button>
+          <button className={`w-full h-full hover:text-white`}>
+            shaurya-jha
+          </button>
         </div>
 
+        {/* Home Button */}
         <div className="hidden lg:flex lg:border-white lg:border-r h-full items-center cursor-pointer hover:bg-black-400">
           <button
-            className={`w-full h-full px-6 ${
+            className={`w-full h-full px-6 hover:text-white ${
               activeButton === "_home"
-                ? "border-b-2 border-yellow-exclusive text-white"
+                ? "border-b-2 border-yellow-exclusive text-white-custom"
                 : ""
             }`}
             onClick={() => handleButtonClick("/", "_home")}
@@ -34,11 +37,12 @@ const Header = () => {
           </button>
         </div>
 
+        {/* About Me Button */}
         <div className="hidden lg:flex lg:border-white lg:border-r h-full items-center cursor-pointer hover:bg-black-400">
           <button
-            className={`w-full h-full px-6 ${
+            className={`w-full h-full px-6 hover:text-white ${
               activeButton === "about-me"
-                ? "border-b-2 border-yellow-exclusive text-white"
+                ? "border-b-2 border-yellow-exclusive text-white-custom"
                 : ""
             }`}
             onClick={() => handleButtonClick("/about-me", "about-me")}
@@ -47,11 +51,12 @@ const Header = () => {
           </button>
         </div>
 
+        {/* Projects Button */}
         <div className="hidden lg:flex lg:border-white lg:border-r h-full items-center cursor-pointer hover:bg-black-400">
           <button
-            className={`w-full h-full px-6 ${
+            className={`w-full h-full px-6 hover:text-white ${
               activeButton === "projects"
-                ? "border-b-2 border-yellow-exclusive text-white"
+                ? "border-b-2 border-yellow-exclusive text-white-custom"
                 : ""
             }`}
             onClick={() => handleButtonClick("/projects", "projects")}
@@ -61,11 +66,12 @@ const Header = () => {
         </div>
       </div>
 
+      {/* Contact Me Button */}
       <div className="hidden lg:flex lg:border-white lg:border-l h-full items-center cursor-pointer hover:bg-black-400">
         <button
-          className={`w-full h-full px-6 ${
+          className={`w-full h-full px-6 hover:text-white ${
             activeButton === "contact-me"
-              ? "border-b-2 border-yellow-exclusive text-white"
+              ? "border-b-2 border-yellow-exclusive text-white-custom"
               : ""
           }`}
           onClick={() => handleButtonClick("/contact-me", "contact-me")}
