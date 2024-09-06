@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import RightIcon from "../components/ui/RightIcon";
 import Typewriter from "typewriter-effect";
@@ -20,7 +20,12 @@ export default function Home() {
             <div className="text-blue-custom pl-[5px] w-[30rem] ">
               <Typewriter
                 options={{
-                  strings: ["Full-Stack Developer", "Blockchain Enthusiast", "Open Source Contributor", "Tech Enthusiast"],
+                  strings: [
+                    "Full-Stack Developer",
+                    "Blockchain Enthusiast",
+                    "Open Source Contributor",
+                    "Tech Enthusiast",
+                  ],
                   autoStart: true,
                   loop: true,
                 }}
@@ -53,7 +58,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="">right</div>
+      <div>right</div>
     </main>
   );
 }
