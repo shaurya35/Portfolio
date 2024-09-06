@@ -3,21 +3,20 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
 const Header = () => {
-  const [activeButton, setActiveButton] = useState(""); 
+  const [activeButton, setActiveButton] = useState("_home");
   const router = useRouter();
 
   const handleButtonClick = (path, buttonName) => {
-    setActiveButton(buttonName); 
-    router.push(path); 
+    setActiveButton(buttonName);
+    router.push(path);
   };
 
   return (
     <header className="h-[64px] lg:h-[50px] border-white border-b font-fira-code text-[19px] lg:text-[16px] text-gray-custom flex justify-between">
       <div className="flex items-center h-full">
-
         <div
           className="pr-48 pl-6 lg:border-white lg:border-r h-full flex items-center cursor-pointer hover:bg-black-400"
-          onClick={() => handleButtonClick("/", "home")}
+          onClick={() => handleButtonClick("/", "_home")}
         >
           <button className={`w-full h-full`}>shaurya-jha</button>
         </div>
@@ -25,13 +24,13 @@ const Header = () => {
         <div className="hidden lg:flex lg:border-white lg:border-r h-full items-center cursor-pointer hover:bg-black-400">
           <button
             className={`w-full h-full px-6 ${
-              activeButton === "hello"
+              activeButton === "_home"
                 ? "border-b-2 border-yellow-exclusive text-white"
                 : ""
             }`}
-            onClick={() => handleButtonClick("/", "hello")}
+            onClick={() => handleButtonClick("/", "_home")}
           >
-            _hello
+            _home
           </button>
         </div>
 
