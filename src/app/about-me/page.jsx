@@ -17,6 +17,7 @@ const page = () => {
           <ProfessionalInfo/>
         </div>
       </div>
+      
       <div>col3</div>
     </div>
   )
