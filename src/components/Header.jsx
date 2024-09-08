@@ -1,11 +1,13 @@
-"use client"; 
+"use client";
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
+  const router = useRouter();
   const [activeButton, setActiveButton] = useState("");
 
   useEffect(() => {
-    const pathname = window.location.pathname; 
+    const pathname = window.location.pathname;
 
     switch (pathname) {
       case "/":
@@ -24,11 +26,11 @@ const Header = () => {
         setActiveButton("_home");
         break;
     }
-  }, []); 
+  }, []);
 
   const handleButtonClick = (path, buttonName) => {
     setActiveButton(buttonName);
-    window.location.href = path; 
+    router.push(path); 
   };
 
   return (
@@ -38,9 +40,7 @@ const Header = () => {
           className="pr-48 pl-6 lg:border-white lg:border-r h-full flex items-center cursor-pointer hover:bg-black-400 hover:text-white-custom"
           onClick={() => handleButtonClick("/", "_home")}
         >
-          <button className={`w-full h-full`}>
-            shaurya-jha
-          </button>
+          <button className={`w-full h-full`}>shaurya-jha</button>
         </div>
 
         <div className="hidden lg:flex lg:border-white lg:border-r h-full items-center cursor-pointer hover:bg-black-400 hover:text-white-custom">

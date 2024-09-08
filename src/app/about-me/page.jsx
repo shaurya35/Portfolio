@@ -6,12 +6,14 @@ import JoystickIcon from "../../components/ui/JoystickIcon";
 import ProfessionalInfo from "@/components/panels/ProfessionalInfo";
 
 const Page = () => {
-  const [activePanel, setActivePanel] = useState("experience"); 
+  const [activePanel, setActivePanel] = useState("experience");
+  const [hoveredIcon, setHoveredIcon] = useState("");
+  const [hoveredPosition, setHoveredPosition] = useState(null); 
 
   return (
     <div className="h-[calc(100%-100px)] text-gray-custom font-fira-code flex ">
       <div className="border-r border-white w-[1300px] flex flex-row h-full">
-        <div className="w-[64px] border-r border-white flex flex-col justify-start items-center">
+        <div className="w-[64px] border-r border-white flex flex-col justify-start items-center relative">
           <div
             className={`mt-6 cursor-pointer ${
               activePanel === "experience"
@@ -19,9 +21,15 @@ const Page = () => {
                 : "hover:text-white-custom"
             }`}
             onClick={() => setActivePanel("experience")}
+            onMouseEnter={(e) => {
+              setHoveredIcon("professional-info");
+              setHoveredPosition(e.target.getBoundingClientRect());
+            }}
+            onMouseLeave={() => setHoveredIcon("")}
           >
             <TerminalIcon />
           </div>
+
           <div
             className={`mt-6 cursor-pointer ${
               activePanel === "bio"
@@ -29,9 +37,15 @@ const Page = () => {
                 : "hover:text-white-custom"
             }`}
             onClick={() => setActivePanel("bio")}
+            onMouseEnter={(e) => {
+              setHoveredIcon("personal-info");
+              setHoveredPosition(e.target.getBoundingClientRect());
+            }}
+            onMouseLeave={() => setHoveredIcon("")}
           >
             <SquareUserIcon />
           </div>
+
           <div
             className={`mt-6 cursor-pointer ${
               activePanel === "sports"
@@ -39,9 +53,28 @@ const Page = () => {
                 : "hover:text-white-custom"
             }`}
             onClick={() => setActivePanel("sports")}
+            onMouseEnter={(e) => {
+              setHoveredIcon("hobbies-info");
+              setHoveredPosition(e.target.getBoundingClientRect());
+            }}
+            onMouseLeave={() => setHoveredIcon("")}
           >
             <JoystickIcon />
           </div>
+
+          {hoveredIcon && hoveredPosition && (
+            <div
+            className="absolute bg-gray-800 text-white px-3 py-1 rounded shadow-lg"
+            style={{
+              left: hoveredPosition.left + hoveredPosition.width - 10, 
+              top: hoveredPosition.top + window.scrollY, 
+              transform: `translateY(${hoveredPosition.height / 2 - 100}px)`, 
+              width: "150px",
+            }}
+            >
+              {hoveredIcon}
+            </div>
+          )}
         </div>
 
         <div className="h-full">
