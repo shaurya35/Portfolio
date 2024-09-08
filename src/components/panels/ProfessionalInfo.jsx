@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import DownIcon from "@/components/ui/DownIcon";
 import Right from "@/components/ui/Right";
@@ -218,7 +217,7 @@ const ProfessionalInfo = ({ category, h1, h2, h3 }) => {
             onClick={() => setActivePanel("h1")}
           >
             <div className="pl-2 flex justify-center items-center">
-              <Right />
+              {activePanel === "h1" ? <DownIcon /> : <Right />}
             </div>
             <div className="pl-2 flex justify-center items-center">
               <FolderIcon />
@@ -232,7 +231,7 @@ const ProfessionalInfo = ({ category, h1, h2, h3 }) => {
             onClick={() => setActivePanel("h2")}
           >
             <div className="pl-2 flex justify-center items-center">
-              <Right />
+              {activePanel === "h2" ? <DownIcon /> : <Right />}
             </div>
             <div className="pl-2 flex justify-center items-center">
               <FolderIcon />
@@ -246,7 +245,7 @@ const ProfessionalInfo = ({ category, h1, h2, h3 }) => {
             onClick={() => setActivePanel("h3")}
           >
             <div className="pl-2 flex justify-center items-center">
-              <Right />
+              {activePanel === "h3" ? <DownIcon /> : <Right />}
             </div>
             <div className="pl-2 flex justify-center items-center">
               <FolderIcon />
@@ -268,7 +267,7 @@ const ProfessionalInfo = ({ category, h1, h2, h3 }) => {
             onClick={() => setActivePanel("mail")}
           >
             <div className="pl-2 flex justify-center items-center">
-              <Right />
+              {activePanel === "mail" ? <DownIcon /> : <Right />}
             </div>
             <div className="pl-2 flex justify-center items-center">
               <MailIcon />
@@ -282,7 +281,7 @@ const ProfessionalInfo = ({ category, h1, h2, h3 }) => {
             onClick={() => setActivePanel("contact")}
           >
             <div className="pl-2 flex justify-center items-center">
-              <Right />
+              {activePanel === "contact" ? <DownIcon /> : <Right />}
             </div>
             <div className="pl-2 flex justify-center items-center">
               <PhoneIcon />
