@@ -6,6 +6,8 @@ import Typewriter from "typewriter-effect";
 export default function Home() {
   return (
     <main className="h-[calc(100%-100px)] text-gray-custom font-fira-code flex justify-evenly items-center">
+      <div className="css-blurry-gradient-blue"></div>
+      <div className="css-blurry-gradient-green"></div>
       <div className=" h-[355px] ">
         <div className=" h-[194px] flex flex-col justify-start ">
           <div className="text-[18px] text-white-custom pl-[6px]">

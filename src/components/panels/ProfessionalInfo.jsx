@@ -200,6 +200,23 @@ const ProfessionalInfo = ({ category, h1, h2, h3 }) => {
     }
   };
 
+  const getTabText = () => {
+    switch (activePanel) {
+      case "h1":
+        return h1;
+      case "h2":
+        return h2;
+      case "h3":
+        return h3;
+      case "mail":
+        return "Mail";
+      case "contact":
+        return "Contact";
+      default:
+        return "Experience"; 
+    }
+  };
+
   return (
     <main className="flex flex-row h-full">
       <aside className="w-[259px] border-r border-white h-full">
@@ -292,7 +309,7 @@ const ProfessionalInfo = ({ category, h1, h2, h3 }) => {
       </aside>
       <div>
         <div>
-          <Tab text="Experience" />
+        <Tab text={getTabText()} />
         </div>
         <div>{renderContent()}</div>
       </div>
