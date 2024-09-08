@@ -15,16 +15,16 @@ const Header = () => {
     <header className="h-[64px] lg:h-[50px] border-white border-b font-fira-code text-[19px] lg:text-[16px] text-gray-custom flex justify-between">
       <div className="flex items-center h-full">
         <div
-          className="pr-48 pl-6 lg:border-white lg:border-r h-full flex items-center cursor-pointer hover:bg-black-400"
+          className="pr-48 pl-6 lg:border-white lg:border-r h-full flex items-center cursor-pointer hover:bg-black-400 hover:text-white-custom"
           onClick={() => handleButtonClick("/", "_home")}
         >
-          <button className={`w-full h-full hover:text-white`}>
+          <button className={`w-full h-full`}>
             shaurya-jha
           </button>
         </div>
 
         {/* Home Button */}
-        <div className="hidden lg:flex lg:border-white lg:border-r h-full items-center cursor-pointer hover:bg-black-400">
+        <div className="hidden lg:flex lg:border-white lg:border-r h-full items-center cursor-pointer hover:bg-black-400 hover:text-white-custom">
           <button
             className={`w-full h-full px-6 hover:text-white ${
               activeButton === "_home"
@@ -38,7 +38,7 @@ const Header = () => {
         </div>
 
         {/* About Me Button */}
-        <div className="hidden lg:flex lg:border-white lg:border-r h-full items-center cursor-pointer hover:bg-black-400">
+        <div className="hidden lg:flex lg:border-white lg:border-r h-full items-center cursor-pointer hover:bg-black-400 hover:text-white-custom">
           <button
             className={`w-full h-full px-6 hover:text-white ${
               activeButton === "about-me"
@@ -52,7 +52,7 @@ const Header = () => {
         </div>
 
         {/* Projects Button */}
-        <div className="hidden lg:flex lg:border-white lg:border-r h-full items-center cursor-pointer hover:bg-black-400">
+        <div className="hidden lg:flex lg:border-white lg:border-r h-full items-center cursor-pointer hover:bg-black-400 hover:text-white-custom">
           <button
             className={`w-full h-full px-6 hover:text-white ${
               activeButton === "projects"
@@ -67,7 +67,7 @@ const Header = () => {
       </div>
 
       {/* Contact Me Button */}
-      <div className="hidden lg:flex lg:border-white lg:border-l h-full items-center cursor-pointer hover:bg-black-400">
+      <div className="hidden lg:flex lg:border-white lg:border-l h-full items-center cursor-pointer hover:bg-black-400 hover:text-white-custom">
         <button
           className={`w-full h-full px-6 hover:text-white ${
             activeButton === "contact-me"

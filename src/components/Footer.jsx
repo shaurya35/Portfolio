@@ -24,7 +24,7 @@ const Footer = () => {
           find-me:
         </div>
         <div
-          className="pr-6 pl-6 lg:border-white lg:border-r h-full flex items-center cursor-pointer"
+          className="pr-6 pl-6 lg:border-white lg:border-r h-full flex items-center cursor-pointer hover:text-white-custom"
           onClick={handleTwitterRedirecting}
         >
           <button>
@@ -32,7 +32,7 @@ const Footer = () => {
           </button>
         </div>
         <div
-          className="pr-6 pl-6 lg:border-white lg:border-r h-full flex items-center cursor-pointer"
+          className="pr-6 pl-6 lg:border-white lg:border-r h-full flex items-center cursor-pointer hover:text-white-custom"
           onClick={handleInstagramRedirecting}
         >
           <button>
@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
       </div>
       <div
-        className="cursor-pointer pl-6 pr-6 lg:border-white lg:border-l h-full flex items-center"
+        className="cursor-pointer pl-6 pr-6 lg:border-white lg:border-l h-full flex items-center hover:text-white-custom"
         onClick={handleGithubRedirecting}
       >
         <Github />
