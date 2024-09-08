@@ -1,14 +1,34 @@
-"use client";
-import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+"use client"; 
+import React, { useState, useEffect } from "react";
 
 const Header = () => {
-  const [activeButton, setActiveButton] = useState("_home");
-  const router = useRouter();
+  const [activeButton, setActiveButton] = useState("");
+
+  useEffect(() => {
+    const pathname = window.location.pathname; 
+
+    switch (pathname) {
+      case "/":
+        setActiveButton("_home");
+        break;
+      case "/about-me":
+        setActiveButton("about-me");
+        break;
+      case "/projects":
+        setActiveButton("projects");
+        break;
+      case "/contact-me":
+        setActiveButton("contact-me");
+        break;
+      default:
+        setActiveButton("_home");
+        break;
+    }
+  }, []); 
 
   const handleButtonClick = (path, buttonName) => {
     setActiveButton(buttonName);
-    router.push(path);
+    window.location.href = path; 
   };
 
   return (
@@ -23,7 +43,6 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Home Button */}
         <div className="hidden lg:flex lg:border-white lg:border-r h-full items-center cursor-pointer hover:bg-black-400 hover:text-white-custom">
           <button
             className={`w-full h-full px-6 hover:text-white ${
@@ -37,7 +56,6 @@ const Header = () => {
           </button>
         </div>
 
-        {/* About Me Button */}
         <div className="hidden lg:flex lg:border-white lg:border-r h-full items-center cursor-pointer hover:bg-black-400 hover:text-white-custom">
           <button
             className={`w-full h-full px-6 hover:text-white ${
@@ -51,7 +69,6 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Projects Button */}
         <div className="hidden lg:flex lg:border-white lg:border-r h-full items-center cursor-pointer hover:bg-black-400 hover:text-white-custom">
           <button
             className={`w-full h-full px-6 hover:text-white ${
@@ -66,7 +83,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Contact Me Button */}
       <div className="hidden lg:flex lg:border-white lg:border-l h-full items-center cursor-pointer hover:bg-black-400 hover:text-white-custom">
         <button
           className={`w-full h-full px-6 hover:text-white ${
