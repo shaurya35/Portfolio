@@ -55,7 +55,7 @@ export default function Home() {
                 className="underline underline-offset-4"
               >
                 "https://github.com/shaurya35/"
-              </a>{" "}
+              </a>
             </div>
           </div>
         </div>
