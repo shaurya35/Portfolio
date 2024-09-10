@@ -17,10 +17,12 @@ module.exports = {
           200: "#011627", // template color
           300: "#071511", // github outer color
           400: "#0D2031", // button hover color
+          500: "#001221" // projects tab color
         },
         gray: {
           custom: "#607B96",
           custom2: "#42D9AC", // github inner color
+          custom3: "#1c2b3a", // projects button color
         },
         white: {
           custom: "#e5e9f0", // name color
