@@ -1,11 +1,12 @@
 import React from "react";
 import CrossIcon from "@/components/ui/CrossIcon";
 import DownIcon from "@/components/ui/DownIcon";
+import Right from "@/components/ui/Right";
+import FolderIcon from "@/components/ui/FolderIcon";
 import ProjectsPanel from "@/components/panels/ProjectsPanel";
 import Image from "next/image";
 
 import "../scrolls.css";
-
 
 const page = () => {
   return (
@@ -17,15 +18,28 @@ const page = () => {
           </div>
           <div className="pl-2">projects</div>
         </div>
-        <div>
-          <div>
-            Nextjs
+        <div className="flex flex-col px-[25px] py-[10px]">
+          <div className="flex flex-row py-2">
+            <div><Right/></div>
+            <div>Nextjs</div>
           </div>
-          <div>React</div>
-          <div>NodeJs</div>
-          <div>Tailwind</div>
-          <div>HTML</div>
-          <div>CSS</div>
+          <div className="flex flex-row py-2">
+            <div><Right/></div>
+            <div>Reactjs</div>
+          </div>
+          <div className="flex flex-row py-2">
+            <div><Right/></div>
+            <div>Tailwind</div>
+          </div>
+          <div className="flex flex-row py-2">
+            <div><Right/></div>
+            <div>Nodejs</div>
+          </div>
+          <div className="flex flex-row py-2">
+            <div><Right/></div>
+            <div>Expressjs</div>
+          </div>
+          
         </div>
       </div>
       <div className="w-full h-full flex flex-col">
