@@ -19,25 +19,25 @@ const page = () => {
           <div className="pl-2">projects</div>
         </div>
         <div className="flex flex-col px-[25px] py-[10px]">
-          <div className="flex flex-row py-2">
+          <div className="flex flex-row pt-1 hover:text-white-custom cursor-pointer">
             <div><Right/></div>
-            <div>Nextjs</div>
+            <div className="pl-1">Nextjs</div>
           </div>
-          <div className="flex flex-row py-2">
+          <div className="flex flex-row pt-1 hover:text-white-custom cursor-pointer">
             <div><Right/></div>
-            <div>Reactjs</div>
+            <div className="pl-1">Reactjs</div>
           </div>
-          <div className="flex flex-row py-2">
+          <div className="flex flex-row pt-1 hover:text-white-custom cursor-pointer">
             <div><Right/></div>
-            <div>Tailwind</div>
+            <div className="pl-1">Tailwind</div>
           </div>
-          <div className="flex flex-row py-2">
+          <div className="flex flex-row pt-1 hover:text-white-custom cursor-pointer">
             <div><Right/></div>
-            <div>Nodejs</div>
+            <div className="pl-1">Nodejs</div>
           </div>
-          <div className="flex flex-row py-2">
+          <div className="flex flex-row pt-1 hover:text-white-custom cursor-pointer">
             <div><Right/></div>
-            <div>Expressjs</div>
+            <div className="pl-1">Expressjs</div>
           </div>
           
         </div>
