@@ -18,28 +18,37 @@ const page = () => {
           </div>
           <div className="pl-2">projects</div>
         </div>
-        <div className="flex flex-col px-[25px] py-[10px]">
-          <div className="flex flex-row pt-1 hover:text-white-custom cursor-pointer">
-            <div><Right/></div>
+        <div className="flex flex-col px-[25px] py-[10px] border-b border-white">
+          <div className="flex flex-row py-2 hover:text-white-custom cursor-pointer">
+            <div>
+              <Right />
+            </div>
             <div className="pl-1">Nextjs</div>
           </div>
-          <div className="flex flex-row pt-1 hover:text-white-custom cursor-pointer">
-            <div><Right/></div>
+          <div className="flex flex-row py-2 hover:text-white-custom cursor-pointer">
+            <div>
+              <Right />
+            </div>
             <div className="pl-1">Reactjs</div>
           </div>
-          <div className="flex flex-row pt-1 hover:text-white-custom cursor-pointer">
-            <div><Right/></div>
+          <div className="flex flex-row py-2 hover:text-white-custom cursor-pointer">
+            <div>
+              <Right />
+            </div>
             <div className="pl-1">Tailwind</div>
           </div>
-          <div className="flex flex-row pt-1 hover:text-white-custom cursor-pointer">
-            <div><Right/></div>
+          <div className="flex flex-row py-2 hover:text-white-custom cursor-pointer">
+            <div>
+              <Right />
+            </div>
             <div className="pl-1">Nodejs</div>
           </div>
-          <div className="flex flex-row pt-1 hover:text-white-custom cursor-pointer">
-            <div><Right/></div>
+          <div className="flex flex-row py-2 hover:text-white-custom cursor-pointer">
+            <div>
+              <Right />
+            </div>
             <div className="pl-1">Expressjs</div>
           </div>
-          
         </div>
       </div>
       <div className="w-full h-full flex flex-col">
