@@ -15,7 +15,7 @@ const page = () => {
           </div>
           <div className="pl-2">contacts</div>
         </div>
-        <div className="flex flex-col px-[25px] py-[10px] h-[10  0px] justify-evenly items-start border-b border-white">
+        <div className="flex flex-col px-[25px] py-[10px] h-[100px] justify-evenly items-start border-b border-white">
           <div
             className={`flex flex-row cursor-pointer hover:text-white-custom `}
           >
