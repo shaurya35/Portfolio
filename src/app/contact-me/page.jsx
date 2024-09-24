@@ -45,7 +45,7 @@ const Page = () => {
 
   return (
     <div className="h-[calc(100%-100px)] text-gray-custom font-fira-code flex ">
-      <div className="border-r border-white w-[391px]">
+      <div className="hidden lg:block border-r border-white lg:w-[391px]"> 
         <div className="flex flex-row text-white-custom border-b border-white w-full h-[35px] justify-start items-center text-[14px] cursor-pointer">
           <div className="pl-2 flex justify-center items-center">
             <DownIcon />
