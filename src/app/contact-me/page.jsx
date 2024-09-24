@@ -20,7 +20,7 @@ const page = () => {
             className={`flex flex-row cursor-pointer hover:text-white-custom `}
           >
             <div className=" flex justify-center items-center">
-              <Right/>
+              <Right />
             </div>
             <div className="pl-2 flex justify-center items-center">
               <MailIcon />
@@ -31,7 +31,7 @@ const page = () => {
             className={`flex flex-row cursor-pointer hover:text-white-custom `}
           >
             <div className=" flex justify-center items-center">
-            <Right/>
+              <Right />
             </div>
             <div className="pl-2 flex justify-center items-center">
               <PhoneIcon />
@@ -40,7 +40,6 @@ const page = () => {
           </div>
         </div>
       </div>
-
       <div className="h-full w-full">
         <div className="flex flex-row text-white-custom border-b border-white w-full h-[35px] justify-start items-center text-[14px] cursor-pointer">
           <div className="pl-4">page.tsx</div>
@@ -48,7 +47,40 @@ const page = () => {
             <CrossIcon />
           </div>
         </div>
+        <div className="pl-48 pt-20 ">
+          <div className="pb-5">
+            <div className="pb-2">_name:</div>
+            <div>
+              <input
+                className="bg-black-600 border rounded-md border-gray-custom3 w-80 h-9 px-2 focus:outline-none focus:border-gray-custom focus:ring-2 focus:ring-gray-custom focus:ring-opacity-50"
+                type="text"
+              />
+            </div>
+          </div>
+          <div className="pb-5">
+            <div className="pb-2">_email:</div>
+            <div>
+              <input
+                className="bg-black-600 border rounded-md border-gray-custom3 w-80 h-9 px-2 focus:outline-none focus:border-gray-custom focus:ring-2 focus:ring-gray-custom focus:ring-opacity-50"
+                type="text"
+              />
+            </div>
+          </div>
+          <div className="pb-5">
+            <div className="pb-2">_message:</div>
+            <div>
+              <textarea
+                className="input-field bg-black-600 border rounded-md border-gray-custom3 w-80 h-64 px-2 pt-1 resize-none focus:outline-none focus:border-gray-custom focus:ring-2 focus:ring-gray-custom focus:ring-opacity-50"
+                type="text"
+              />
+            </div>
+          </div>
+          <button className="bg-white-custom2 text-white-custom text-[14px] p-2 rounded-lg">
+            submit-message
+          </button>
+        </div>
       </div>
+      <div></div>
     </div>
   );
 };
