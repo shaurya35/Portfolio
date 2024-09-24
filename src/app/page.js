@@ -35,7 +35,6 @@ export default function Home() {
           </div>
         </div>
         <div className="h-[161px] flex flex-col justify-center">
-          {/* Render comments as JSX text */}
           <div className="pb-[10px] text-[14px]">
             {"// welcome to my portfolio"}
           </div>
