@@ -16,7 +16,7 @@ const ProjectsPanel = ({
         <div className="font-bold text-blue-custom text-[15px] pr-3 pl-3">
           Project {projectNumber}
         </div>
-        <div className="text-[15px]">// {detail}</div>
+        <div className="text-[15px]">{`// ${detail}`}</div>
       </div>
       <div className=" bg-black-500 border-white border rounded-2xl">
         <div>{image}</div>

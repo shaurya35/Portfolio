@@ -18,7 +18,6 @@ export default function Home() {
             <div className="flex justify-center items-center text-blue-custom">
               <RightIcon />
             </div>
-            {/* width ratio enabled */}
             <div className="text-blue-custom pl-[5px] w-[30rem] ">
               <Typewriter
                 options={{
@@ -54,7 +53,8 @@ export default function Home() {
                 target="_blank"
                 className="underline underline-offset-4"
               >
-                "https://github.com/shaurya35/"
+                &quot;https://github.com/shaurya35/&quot;
+
               </a>
             </div>
           </div>
