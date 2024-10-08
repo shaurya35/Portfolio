@@ -1,14 +1,16 @@
 "use client";
 import React, { useState } from "react";
+// import Image from "next/image";
 import TerminalIcon from "../../components/ui/TerminalIcon";
 import SquareUserIcon from "../../components/ui/SquareUserIcon";
 import JoystickIcon from "../../components/ui/JoystickIcon";
 import ProfessionalInfo from "@/components/panels/ProfessionalInfo";
+// import pencil from "../../../public/photos/pencil.jpg";
 
 const Page = () => {
   const [activePanel, setActivePanel] = useState("experience");
   const [hoveredIcon, setHoveredIcon] = useState("");
-  const [hoveredPosition, setHoveredPosition] = useState(null); 
+  const [hoveredPosition, setHoveredPosition] = useState(null);
 
   return (
     <div className="h-[calc(100%-100px)] text-gray-custom font-fira-code flex ">
@@ -64,13 +66,13 @@ const Page = () => {
 
           {hoveredIcon && hoveredPosition && (
             <div
-            className="absolute bg-gray-800 text-white px-3 py-1 rounded shadow-lg"
-            style={{
-              left: hoveredPosition.left + hoveredPosition.width - 10, 
-              top: hoveredPosition.top + window.scrollY, 
-              transform: `translateY(${hoveredPosition.height / 2 - 100}px)`, 
-              width: "150px",
-            }}
+              className="absolute bg-gray-800 text-white px-3 py-1 rounded shadow-lg"
+              style={{
+                left: hoveredPosition.left + hoveredPosition.width - 10,
+                top: hoveredPosition.top + window.scrollY,
+                transform: `translateY(${hoveredPosition.height / 2 - 100}px)`,
+                width: "150px",
+              }}
             >
               {hoveredIcon}
             </div>
@@ -103,6 +105,11 @@ const Page = () => {
             />
           )}
         </div>
+      </div>
+      <div className="w-full">
+        <div className="text-white-custom border-b border-white w-full h-[35px]"></div>
+        {/* <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7217964089887612928" height="692" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe> */}
+        {/* <Image src={pencil} alt="pencil" /> */}
       </div>
     </div>
   );
