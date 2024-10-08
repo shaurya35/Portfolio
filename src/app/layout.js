@@ -15,7 +15,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="./favicon.png" />
+        <link
+          rel="icon"
+          href={`${
+            process.env.NODE_ENV === "production" ? "/shaurya35.github.io" : ""
+          }/favicon.png`}
+        />
+
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
       </head>
@@ -32,4 +38,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
