@@ -2,7 +2,6 @@ import React from "react";
 import CrossIcon from "@/components/ui/CrossIcon";
 import DownIcon from "@/components/ui/DownIcon";
 import Right from "@/components/ui/Right";
-import FolderIcon from "@/components/ui/FolderIcon";
 import ProjectsPanel from "@/components/panels/ProjectsPanel";
 import Image from "next/image";
 
